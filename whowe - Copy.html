@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- font-awesome cdn -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <title>Document</title>
+   </head>
+   <style>
+      
+      ul {
+      list-style-type: none;
+      margin: 0 10px;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      }
+      li {
+      display: inline-block;
+      padding: 0 40px;
+      /* margin-left: auto;
+      margin-right: auto; */
+      }
+      li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      }
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+      background-color: rgb(43, 108, 146);
+      color: white;
+      font-weight: bold;
+      }
+      .active {
+      background-color: rgb(43, 108, 146);
+      color: white;
+      font-weight: bold;
+      }
+      /* td {
+      margin: 20px;
+      padding: 10px 15px 0 15px;
+      }
+      .t2 td {
+      margin: 20px;
+      padding: 5px 25px 5px 25px;
+      } */
+      #toggle {
+      display: block;
+      width: 28px;
+      height: 15px;
+      margin: 20px 10px;
+      float: right;
+      }
+      #toggle span:after,
+      #toggle span:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -9px;
+      }
+      #toggle span:after{
+      top: 9px;
+      }
+      #toggle span {
+      position: relative;
+      display: block;
+      }
+      #toggle span,
+      #toggle span:after,
+      #toggle span:before {
+      width: 100%;
+      height: 5px;
+      background-color: rgb(36, 87, 102);
+      transition: all 0.3s;
+      backface-visibility: hidden;
+      border-radius: 2px;
+      }
+
+      .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 30px;
+      background-color: rgb(213, 222, 230);
+      padding: 10px;
+      margin-top: 30px;
+      }
+
+      .grid-container > div {
+      background-color: rgb(213, 222, 230);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+      }
+
+      .item1 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      }
+      table tr td, .pd  {
+         font-size: 80%;
+      }
+      .a {
+         background-color: rgb(18, 71, 131);
+         cursor: pointer;
+         text-decoration: none;
+         color: white;
+         padding: 5px;
+      }
+   </style>
+   <body>
+      <!-- Navigation bar -->
+      <ul>
+         <li><a class="active" href="#home"><i class="fa fa-user m-2" aria-hidden="true"></i>ABOUT ME</a></li>
+         <li><a href="#"><i class="fa fa-columns m-2" aria-hidden="true"></i>RESUME</a></li>
+         <li><a href="#"><i class="fa fa-rocket m-2" aria-hidden="true"></i>PORTFOLIO</a></li>
+         <li><a href="#"><i class="fa fa-pencil-square-o m-2" aria-hidden="true"></i>BLOG</a></li>
+         <li><a href="#"><i class="fa fa-pencil m-2" aria-hidden="true"></i>CONTACT ME</a></li>
+      </ul>
+
+      <div class="grid-container">
+            <div class="item1">
+               <div>
+                  <h4 style="display: inline; margin-right: 20px;">RESUME</h4>
+                  <a href="#" class="a" style="padding-left: 22px; padding-right: 20px; float: right;">Edit Resume</a>
+               </div>
+               
+               <div  style="background-color: white;" >
+                  <h5 style=" padding-top: 5px;">PROFESSIONAL DETAILS</h5>
+                  <img class="card-img-top" src="https://amymhaddad.s3.amazonaws.com/morocco-blue.png" height="200" alt="Card image cap">
+                  <div style="margin-left: 50px;">
+                     <table style="padding: 10px;">
+                        <tr>
+                           <td><b>Name</b></td>
+                           <td>John Doe</td>
+                        </tr>
+                        <tr>
+                           <td><b>Age</b></td>
+                           <td><sub>3 </sub>8 years</td>
+                        </tr>
+                        <tr>
+                           <td><b>Location</b></td>
+                           <td>Rome, Italy</td>
+                        </tr>
+                        <tr>
+                           <td><b>Exprience</b></td>
+                           <td>15 years</td>
+                        </tr>
+                        <tr>
+                           <td><b>Degree</b></td>
+                           <td>MBA</td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div style="float: right;">
+                  <a href="#menu" id="toggle"><span></span></a>
+               </div>
+               <div style="background-color: white;">
+                  <h3 style="border-bottom: 1px solid black; padding-left: 15px; padding-top: 15px; margin-top: 80px; text-align: left;"><b></b>ABOUT ME</b></h3>
+                  <div>
+                     <table style="margin: auto; padding-bottom: 20px;">
+                        <tr>
+                           <td><b>Name</b></td>
+                           <td>John Doe</td>
+                           <td><b>AGE</b></td>
+                           <td><sub>3</sub>8 years</td>
+                        </tr>
+                        <tr>
+                           <td><b>Location</b></td>
+                           <td>Rome, Italy</td>
+                           <td><b>EXPERIRNCE</b></td>
+                           <td>15 years</td>
+                        </tr>
+                        <tr>
+                           <td><b>DEGREE</b></td>
+                           <td>MBA</td>
+                           <td><b>CAREER LEVEL</b></td>
+                           <td>Mid-level</td>
+                        </tr>
+                        <tr>
+                           <td><b>PHONE</b></td>
+                           <td>(800) 123-4567</td>
+                           <td><b>FAX</b></td>
+                           <td>(800) 123-4567</td>
+                        </tr>
+                        <tr>
+                           <td><b>E-MAIL</b></td>
+                           <td><a href="">a@example.com</a></td>
+                           <td><b>WEBSITE</b></td>
+                           <td><a href="">example.com</a></td>
+                        </tr>
+                     </table>
+                     <h3 style="border-bottom: 1px solid black; text-align: left; display: block; margin: 10px; padding: 10px;">I'M WEB DESIGNER</h3>
+                     <p class="pd">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+      </div>
+   </body>
+</html>
