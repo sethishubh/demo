@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>k2 lawn care and landscaping services</title>
+      <link href="css/styles.css" type="text/css" rel="stylesheet" />
+   </head>
+   <body>
+      <h1 id="heading"></h1>
+      <h1 id="heading1"></h1>
+      <p id="para"></p>
+      <p id="para1">
+         <!-- Fixing error: adding a p element with id of "random" -->
+      <p id="random"></p>
+      </p>
+      <div>
+      <ul>
+         <li><a href="index.html" target="_self">Home</a></li>
+         <li><a href="aboutus.html" target="_self">About Us</a></li>
+         <li><a href="contactus.html" target="_self">Contact Us</a></li>
+      </ul>
+      <br />
+      <!--Error: img tag must be closed with ">" -->
+      <img src="img/landimage.jpg" alt="picture" style="width:300px;height:150px;">
+      <br />
+      <h2>K2 Lawn Care and Landscaping Services</h2>
+      <div id="para2" class="center">
+         <h3>Creativity. Quality. Experience.</h3>
+         <br>
+         <!--Error: img tag must be closed with ">" -->
+         <img src="img/landimage.jpg" alt="picture" style="width:300px;height:150px;">
+         <br />
+         <p>It lacks images, but at least it has style.
+            And it has links, even if they don't go
+            anywhere&hellip;
+         </p>
+      </div>
+      <div id="footer">
+         Law care and Landscaping<br />
+         http://sotd.us/stacyconn/index.html<br />
+         Appleton, WI 54914
+      </div>
+      
+      <script>
+         // a conditional statement that writes some type of variable text on an HTML page//
+         var randomText=Math.random().toString(36).substring(7);
+         
+         if (randomText!="") {
+         /* Error: you must have the id of the element you want to select between "" in document.getElementByld("").
+         Here you are using document.getElementByld("random") and if you look your html file, you will found no html element with id of "random" .
+         So, I am adding an p element with id of "random" in html file*/
+         // Error: Also, + is missing after randomText in randomText"</para1>" to correctly use string interpolation in JS
+         // Error: document.getElementByld is not a function, document.getElementById is. Please note "I" in getElementById. Your code has 1 in place of I.
+         // Your code-> document.getElementByld("random").innerHTML="<para1>Random/Variable text:" + randomText"</para1>";
+         
+         document.getElementById("random").innerHTML="<h3>Random/Variable text:" + randomText + "</h3>";
+         
+         }
+         
+         
+         var time = new Date().getHours();
+         
+         
+         if (time < 20) {
+         document.getElementById("para").innerHTML = "Good day";
+         }
+         else {
+         document.getElementById("para").innerHTML = "Bad day";
+         }
+         
+         var a = 10 , b=20;
+         
+         if (a < b) {
+         document.getElementById("para1").innerHTML = "b is big";
+         }
+         else {
+         document.getElementById("para1").innerHTML = "a is big";
+         }
+         
+         /* A switch statement that displays a message */
+         var today = new Date();
+         var timeNow = today.getHours();
+         
+         switch (true) {
+         case timeNow > 17 : document.getElementById("heading1").innerHTML = "Good Evening </br> Welcome, Rasmussen Students!";
+         break;
+         case timeNow > 12 : document.getElementById("heading1").innerHTML = "Good Afternoon </br> Welcome, Rasmussen Students!";
+         break;
+         case timeNow > 6 : document.getElementById("heading1").innerHTML = "Good Morning </br> Welcome, Rasmussen Students!";
+         break;
+         default: document.getElementById("heading1").innerHTML = "Welcome... but isn't it bed time now?";
+         }
+         
+         /* A random statement that displays a message depending on the time of day */
+         var day = new Date();
+         var hr = day.getHours();
+         
+         if (hr == 1) {
+         document.getElementById("heading").innerHTML = "Good morning! 1AM and still your going!";
+         }
+         if (hr == 2) {
+         document.getElementById("heading").innerHTML = "Hey, it is past 2AM! The bars must be closed!";
+         }
+         if (hr == 3) {
+         document.getElementById("heading").innerHTML = "Hey, it is after 3AM! Are you a vampire or what?";
+         }
+         if (hr == 4) {
+         document.getElementById("heading").innerHTML = "4AM? You must roam all night huh!";
+         }
+         if (hr == 5) {
+         document.getElementById("heading").innerHTML = "Whoa! It's almost daylight and your still going!";
+         }
+         if (hr == 6) {
+         document.getElementById("heading").innerHTML = "Hey, isn't it too early to be using your computer";
+         }
+         if ((hr == 6) || (hr == 7) || (hr == 8) || (hr == 9) || (hr == 10)) {
+         document.getElementById("heading").innerHTML = "Good Morning!";
+         }
+         if (hr == 11) {
+         document.getElementById("heading").innerHTML = "11AM... Is it time for lunch yet?";
+         }
+         if (hr == 12) {
+         document.getElementById("heading").innerHTML = "NOON! Great, it must be time for lunch!";
+         }
+         if (hr == 14) {
+         document.getElementById("heading").innerHTML = "It's 2PM. Have you eaten lunch yet?";
+         }
+         if ((hr == 15) || (hr == 16) || (hr == 13)) {
+         document.getElementById("heading").innerHTML = "Good Afternoon!";
+         }
+         if ((hr == 17) || (hr == 18) || (hr == 19) || (hr == 20) || (hr == 21) || (hr == 22)) {
+         document.getElementById("heading").innerHTML = "Good Evening! Welcome to prime time on the web!";
+         }
+         if (hr == 23) {
+         document.getElementById("heading").innerHTML = "It's almost midnight...Aren't you sleepy yet?";
+         }
+         if (hr == 0) {
+         document.getElementById("heading").innerHTML = "It's midnight... do you ever sleep?";
+         }
+      </script>
+   </body>
+</html>
